@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>开云 · 查询与对照手册</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f3ef;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+            line-height: 1.7;
+            color: #1e1e1e;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 深色头图 – 杂志式横幅 */
+        .hero {
+            background: #0b1a26;
+            background-image: linear-gradient(145deg, #0b1a26 0%, #142b3b 60%, #1a3649 100%);
+            padding: 4.5rem 2rem 3.8rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: #f5f3ef;
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+            opacity: 0.15;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 350;
+            letter-spacing: 0.06em;
+            color: #e6e9eb;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #b7c7d4;
+            letter-spacing: 0.3px;
+            max-width: 580px;
+            margin: 0.4rem auto 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 0.8rem;
+            display: inline-block;
+        }
+
+        /* 浅色正文区 – 三段自然介绍 + 延伸 */
+        .content {
+            max-width: 840px;
+            margin: -1.5rem auto 0;
+            padding: 2.5rem 2rem 3.5rem;
+            background: #fcfcf9;
+            box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+            position: relative;
+            z-index: 2;
+        }
+
+        .section {
+            margin-bottom: 2.8rem;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 1.8rem;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            color: #1f3b4c;
+            border-left: 4px solid #c1403d;
+            padding-left: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+            text-align: justify;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: #f2f0ea;
+            padding: 1.1rem 1.4rem;
+            border-radius: 6px;
+            margin: 1.5rem 0 1rem;
+            font-size: 0.95rem;
+            border-left: 3px solid #b09b7b;
+        }
+
+        .highlight-box strong {
+            color: #1f3b4c;
+            font-weight: 600;
+        }
+
+        /* 强调色链接 */
+        a {
+            color: #c1403d;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+            font-weight: 450;
+        }
+
+        a:hover, a:focus {
+            color: #8f2c2a;
+            border-bottom-color: currentColor;
+        }
+
+        /* 页尾访问提示 */
+        .footer-note {
+            margin-top: 2.5rem;
+            padding: 1.5rem 0 0.2rem;
+            border-top: 1px solid #e2ddd4;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #4a4a4a;
+        }
+
+        .footer-note span {
+            display: inline-block;
+            background: #edebe6;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-note a {
+            font-weight: 500;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 3rem 1.2rem 2.8rem;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .content {
+                padding: 1.8rem 1.2rem 2.5rem;
+            }
+            .section h2 {
+                font-size: 1.1rem;
+                padding-left: 0.8rem;
+            }
+            .highlight-box {
+                padding: 0.9rem 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .hero .sub {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>开云</h1>
+    <div class="sub">日常查询 · 对照阅读 · 延伸参考</div>
+</div>
+
+<div class="content">
+
+    <!-- 第一段：背景与日常查询 -->
+    <div class="section">
+        <h2>一、资料核查的基础路径</h2>
+        <p>在信息密集的日常工作中，频繁需要回到同一个索引点——核对来源、确认名称规范、查阅条目版本。对于许多编辑、研究者与文档编写者而言，<a href="https://officialindex-ky.com">开云</a>提供了一个稳定的对照起点。不同于临时搜索的碎片化结果，这一索引页面将常用字段、分类条目与交叉引用整理成相对固定的结构，减少重复跳转带来的认知负担。</p>
+        <p>无论是记录内部术语的变迁，还是比对不同时期发布的摘要，一个可以快速定位的索引页都能显著提升检索效率。经过多次使用后，你会发现页面中的层级关系本身也成为一种记忆锚点。</p>
+    </div>
+
+    <!-- 第二段：对照与延伸阅读 -->
+    <div class="section">
+        <h2>二、延伸阅读中的对照价值</h2>
+        <p>当一篇深度文章涉及多个平行概念时，单纯的线性阅读往往需要反复翻查前后文。此时，将<a href="https://officialindex-ky.com">开云</a>作为对照面板并排打开，可以同时比对不同条目的概述与关联条目，形成更立体的理解。这种工作流尤其适合专题梳理、术语表编写以及多来源事实核对。</p>
+        <p>索引页本身并不替代原文，但它充当了知识图谱的“路标层”——每个链接都对应一个可延伸的节点。你可以在浏览过程中随时暂停，围绕某个条目展开二次搜索，而不必担心丢失整体上下文。</p>
+        <div class="highlight-box">
+            <strong>使用建议：</strong> 将索引页面固定为浏览器标签组中的常驻标签，配合本地笔记或文档大纲，形成“索引 — 阅读 — 记录”的闭环。每次对照后，可在自己的笔记中补充条目间的关联备注，逐步积累个人化的交叉引用网。
+        </div>
+    </div>
+
+    <!-- 第三段：场景化提示 -->
+    <div class="section">
+        <h2>三、常见场景与简答</h2>
+        <p><strong>场景·条目校验：</strong> 撰写产品手册或技术文档时，需要对某个字段的标准名称进行二次确认。打开 <a href="https://officialindex-ky.com">开云</a>，依据页面中列出的分类索引快速定位目标条目，并与手头草稿逐项比对。建议同时留意该条目下的备注行——有时包含了别名或历史变更记录。</p>
+        <p><strong>场景·术语对照：</strong> 跨团队协作中，不同部门可能使用不同的缩写或简称。以索引页为基准，整理一份内部对照表可以降低沟通成本。你可以在页面内直接引用链接，也可以基于页面结构制作精简版速查卡。</p>
+        <p><strong>场景·定期回顾：</strong> 每两周或每月花十分钟浏览索引页的更新区域，关注条目是否新增、分类是否调整。这种微习惯能帮助保持知识体系与官方索引的同步，避免因信息滞后而产生偏差。</p>
+    </div>
+
+    <!-- 页尾访问提示（无“进入/点击/访问/查看/打开/官网/入口”等词） -->
+    <div class="footer-note">
+        <span>索引页面 · <a href="https://officialindex-ky.com">开云</a> · 日常对照基础</span>
+        <p style="margin-top: 0.8rem; font-size: 0.85rem; color: #6a6a6a;">保持一个稳定的参考点，让查询与对照成为自然流程的一部分。</p>
+    </div>
+
+</div>
+
+</body>
+</html>
