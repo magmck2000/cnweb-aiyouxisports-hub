@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK体育 · 持续关注的起点</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f6f1;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2e2b27;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fffcf9;
+      padding: 2.5rem 2rem;
+      border-radius: 32px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      transition: box-shadow 0.25s;
+    }
+
+    @media (min-width: 640px) {
+      .page {
+        padding: 3.5rem 3rem;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      border-left: 5px solid #b8a48c;
+      padding-left: 1.2rem;
+      margin-bottom: 1.8rem;
+      color: #2b241f;
+      line-height: 1.3;
+    }
+
+    h1 small {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #7a6e64;
+      display: block;
+      margin-top: 0.3rem;
+      letter-spacing: 0;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      background: #f2ede6;
+      padding: 1.6rem 2rem;
+      border-radius: 24px;
+      margin-bottom: 2.5rem;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+    }
+
+    .hero-text p {
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+      margin: 2.8rem 0;
+    }
+
+    @media (min-width: 600px) {
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03), 0 0 0 1px #ede7e0;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 0 0 1px #d9cfc4;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 540;
+      margin-bottom: 0.5rem;
+      color: #3b322b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h3 span {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: #4f453e;
+    }
+
+    .quote-block {
+      background: #efe9e2;
+      border-left: 6px solid #b09882;
+      padding: 1.5rem 2rem;
+      border-radius: 0 20px 20px 0;
+      margin: 2rem 0;
+      font-style: normal;
+      color: #3a322c;
+    }
+
+    .quote-block strong {
+      color: #2b241f;
+    }
+
+    .faq-mini {
+      margin: 2.8rem 0 1.5rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e6ddd5;
+      padding: 1rem 0;
+    }
+
+    .faq-item:first-of-type {
+      border-top: 1px solid #e6ddd5;
+    }
+
+    .faq-q {
+      font-weight: 550;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: default;
+      color: #2b241f;
+    }
+
+    .faq-q::after {
+      content: "· · ·";
+      letter-spacing: 2px;
+      color: #b8a48c;
+      font-weight: 300;
+    }
+
+    .faq-a {
+      margin-top: 0.4rem;
+      color: #564b42;
+      font-size: 0.96rem;
+      padding-right: 1rem;
+    }
+
+    .inline-link {
+      color: #7b5f49;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition: color 0.15s;
+    }
+
+    .inline-link:hover {
+      color: #3f2e23;
+      text-decoration-thickness: 2px;
+    }
+
+    .tagline {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2d8ce;
+      font-size: 0.95rem;
+      color: #675b50;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+    }
+
+    .tagline span {
+      background: #efebe6;
+      padding: 0.1rem 0.8rem;
+      border-radius: 40px;
+      font-size: 0.82rem;
+      color: #4f443b;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      border: 1px solid #cabbaf;
+      background: transparent;
+      color: #3b322b;
+      padding: 0.5rem 1.6rem;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+      margin-right: 0.5rem;
+    }
+
+    .btn-ghost:hover {
+      background: #e3d9cf;
+      border-color: #a18f7e;
+    }
+
+    .flex-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1rem;
+      align-items: center;
+      margin: 0.8rem 0;
+    }
+
+    @media (max-width: 450px) {
+      h1 {
+        font-size: 1.7rem;
+        padding-left: 0.8rem;
+      }
+      .hero-text {
+        padding: 1.2rem 1.2rem;
+      }
+      .card {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+
+    /* 纯粹装饰：首字下沉效果在hero里不用，保持干净 */
+    .muted {
+      color: #7d6f63;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>
+      再次回到这里
+      <small>收藏一个习惯，持续关注 MK体育</small>
+    </h1>
+
+    <div class="hero-text">
+      <p>
+        有些站点，来过一次就会放进书签栏。不是因为花哨的动效，而是每次打开都觉得信息刚刚好。
+        <strong>MK体育</strong> 对我来说就是这样的存在——运动员故事、赛事解读、训练心得，不煽情不堆砌，读起来踏实。
+      </p>
+      <p>
+        如果你也喜欢在碎片时间里看点有内容的体育资讯，不妨把 <a href="https://zhsite-mk.com" class="inline-link">MK体育</a> 留在标签页里。不用特意记，下次想刷的时候自然就点开了。
+      </p>
+    </div>
+
+    <!-- 卡片区域：用途 + 适合谁 -->
+    <div class="card-grid">
+      <div class="card">
+        <h3><span>📋</span> 日常读什么</h3>
+        <p>
+          赛前阵容分析、运动科学小科普、老将专访，也有冷门项目介绍。页面排版清爽，读一篇大约 4–7 分钟，很适合午休或通勤时打开。
+        </p>
+      </div>
+      <div class="card">
+        <h3><span>🧑‍🤝‍🧑</span> 谁在关注</h3>
+        <p>
+          业余跑者、球类爱好者、体育专业学生，还有单纯喜欢运动员故事的读者。内容不挑人，既有基础科普也有深度视角。
+        </p>
+      </div>
+    </div>
+
+    <!-- 引用块 / 提示框 风格 -->
+    <div class="quote-block">
+      <strong>💡 一个小习惯</strong><br>
+      把 <a href="https://zhsite-mk.com" class="inline-link">MK体育</a> 添加到浏览器书签栏，或者用「稍后读」app 收藏。之后每次想看点体育相关的内容，就不用临时搜索了。持续关注，慢慢会发现自己对某个运动的理解深了一层。
+    </div>
+
+    <!-- 自然链接段落 (嵌入句子) -->
+    <p style="margin-bottom: 1.2rem;">
+      前阵子和朋友聊起马拉松备赛，我直接翻出 <a href="https://zhsite-mk.com" class="inline-link">MK体育</a> 上一篇关于心率区间的文章分享给他。这类内容没有时效性压力，适合反复看。网站更新频率稳定，不会突然出现大量信息流，比较克制。
+    </p>
+    <p style="margin-bottom: 1.2rem;">
+      如果你也喜欢那种「安静但有内容」的体育站点，可以试试把 <a href="https://zhsite-mk.com" class="inline-link">MK体育</a> 放进收藏夹。不需要每天刷，想起来的时候去看两眼，常常会有意外收获。
+    </p>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="faq-q">页面风格会经常变吗？</div>
+        <div class="faq-a">整体调性偏稳，偶尔有专题排版变化，但不会突然改版，长期读者不用担心适应问题。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">内容偏向哪类运动？</div>
+        <div class="faq-a">以足球、篮球、田径、游泳为主，也会涉及户外、格斗和小众项目，覆盖面比较广。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">适合每天看吗？</div>
+        <div class="faq-a">更新不密集，适合隔两三天打开一次。如果想集中阅读，也可以一次性翻翻往期文章。</div>
+      </div>
+    </div>
+
+    <!-- 底部装饰 与 温和的提示 -->
+    <div class="tagline">
+      <span>📌 书签友好 · 无弹窗 · 内容向</span>
+      <span>
+        <a href="https://zhsite-mk.com" class="btn-ghost">MK体育</a>
+        <span class="muted" style="font-size:0.85rem;">再次收藏</span>
+      </span>
+    </div>
+
+    <!-- 最后再自然嵌入一个链接，确保符合严格文本要求 -->
+    <p style="font-size: 0.9rem; color: #7a6e64; margin-top: 1.2rem; text-align: right; border-top: 1px dashed #ddd5cb; padding-top: 1.2rem;">
+      * 本文档仅作介绍用途，所指向的站点为 <a href="https://zhsite-mk.com" class="inline-link">MK体育</a>。
+    </p>
+  </div>
+</body>
+</html>
